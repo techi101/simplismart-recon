@@ -1,0 +1,9 @@
+sku,unit_cost
+llm-llama-8b,0.07
+llm-llama-70b,0.46
+llm-deepseek-r1,2.6
+img-flux-dev,0.017
+img-sdxl,0.15
+stt-whisper-turbo,0.0011
+gpu-h100-hr,3.1
+gpu-l40s-hr,1.35

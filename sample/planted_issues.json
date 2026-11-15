@@ -1,0 +1,97 @@
+{
+  "note": "Synthetic data. These problems were planted on purpose.",
+  "asOf": "2026-11-15",
+  "planted": [
+    {
+      "type": "OVER_BILLED",
+      "customer_id": "C02",
+      "period": "2026-10",
+      "amountCents": 81848,
+      "why": "list price used instead of contract price"
+    },
+    {
+      "type": "MISSING_INVOICE",
+      "customer_id": "C03",
+      "period": "2026-09",
+      "amountCents": 1045050
+    },
+    {
+      "type": "DUPLICATE_PAYMENT",
+      "customer_id": "C04",
+      "period": "2026-08",
+      "invoice_id": "INV-2026-0009",
+      "amountCents": 2356536
+    },
+    {
+      "type": "UNDER_BILLED",
+      "customer_id": "C05",
+      "period": "2026-08",
+      "amountCents": 1829250,
+      "why": "GPU line left off the invoice"
+    },
+    {
+      "type": "SHORT_PAID",
+      "customer_id": "C06",
+      "period": "2026-09",
+      "invoice_id": "INV-2026-0016",
+      "amountCents": 97105
+    },
+    {
+      "type": "DUPLICATE_INVOICE",
+      "customer_id": "C07",
+      "period": "2026-09",
+      "invoice_id": "INV-2026-0020",
+      "amountCents": 1061120
+    },
+    {
+      "type": "UNDER_BILLED",
+      "customer_id": "C08",
+      "period": "2026-09",
+      "amountCents": 56940,
+      "why": "last 20% of token events arrived after the invoice run"
+    },
+    {
+      "type": "UNAPPLIED_CASH",
+      "customer_id": "C09",
+      "payment_id": "PAY-00017",
+      "amountCents": 1300000
+    },
+    {
+      "type": "UNRATED_USAGE",
+      "customer_id": "C10",
+      "period": "2026-10",
+      "sku": "llm-qwen3-235b"
+    },
+    {
+      "type": "MISSING_INVOICE",
+      "customer_id": "C11",
+      "period": "2026-10",
+      "amountCents": 612384
+    },
+    {
+      "type": "SHORT_PAID",
+      "customer_id": "C12",
+      "period": "2026-08",
+      "invoice_id": "INV-2026-0033",
+      "amountCents": 2500
+    },
+    {
+      "type": "UNDER_BILLED",
+      "customer_id": "C14",
+      "period": "2026-10",
+      "amountCents": 100000,
+      "why": "platform fee not added"
+    },
+    {
+      "type": "UNAPPLIED_CASH",
+      "customer_id": "",
+      "payment_id": "PAY-00026",
+      "amountCents": 431250
+    }
+  ],
+  "feedDuplicateIds": [
+    "PAY-00004",
+    "PAY-00018"
+  ],
+  "collidingPairs": 3
+}

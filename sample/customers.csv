@@ -1,0 +1,15 @@
+customer_id,customer_name,aliases,platform_fee,terms_days
+C01,Lumen Reels,Lumen Reels Pvt Ltd,2000.00,30
+C02,Kestrel Voice,Kestrel Voice Technologies,1500.00,30
+C03,Paperkite Docs,Paperkite,500.00,15
+C04,Tandem Health,Tandem Health Labs,3000.00,45
+C05,Brightloop Video,Brightloop,2000.00,30
+C06,Monsoon Commerce,Monsoon Commerce Pvt Ltd,1000.00,30
+C07,Quarry Analytics,Quarry Analytics Inc,1000.00,30
+C08,Fernway Learning,Fernway,500.00,15
+C09,Ostrich Pay,Ostrich Payments Pvt Ltd,2500.00,30
+C10,Halcyon Agents,Halcyon,1500.00,30
+C11,Cobalt Studio,Cobalt Studio LLC,1000.00,30
+C12,Nimbus Hire,Nimbus Hire,500.00,30
+C13,Saffron Insure,Saffron Insurance Brokers,3000.00,30
+C14,Vireo Logistics,Vireo Logistics Pvt Ltd,1000.00,30

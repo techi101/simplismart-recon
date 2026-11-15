@@ -1,0 +1,17 @@
+customer_id,sku,meter,unit,unit_price
+*,llm-llama-8b,Model API,1M tokens,0.15
+*,llm-llama-70b,Model API,1M tokens,0.8
+*,llm-deepseek-r1,Model API,1M tokens,4
+*,img-flux-dev,Image,image,0.03
+*,img-sdxl,Image,image,0.25
+*,stt-whisper-turbo,Speech,audio min,0.002
+*,gpu-h100-hr,Dedicated GPU,GPU hour,4.5
+*,gpu-l40s-hr,Dedicated GPU,GPU hour,2.1
+C01,gpu-h100-hr,Dedicated GPU,GPU hour,3.9
+C01,img-flux-dev,Image,image,0.025
+C02,stt-whisper-turbo,Speech,audio min,0.0016
+C02,gpu-l40s-hr,Dedicated GPU,GPU hour,1.8
+C04,gpu-h100-hr,Dedicated GPU,GPU hour,4
+C04,llm-llama-70b,Model API,1M tokens,0.7
+C09,llm-llama-70b,Model API,1M tokens,0.72
+C13,gpu-l40s-hr,Dedicated GPU,GPU hour,1.9

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Usage to Cash Recon</title>
+<meta name="description" content="Reconcile metered GenAI usage against invoices and bank receipts. Finds missing invoices, under billing, duplicate payments and unapplied cash. Runs in the browser on synthetic sample data or your own CSVs.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232a78d6'/%3E%3Cpath d='M8 20h5l3-8 3 8h5' stroke='white' stroke-width='2.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+<script>try{const t=localStorage.getItem('u2c-theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+</head>
+<body>
+<div class="shell">
+  <aside class="sidebar">
+    <div class="brand">
+      <span class="logo" aria-hidden="true"><svg viewBox="0 0 32 32"><rect width="32" height="32" rx="8"/><path d="M8 20h5l3-8 3 8h5"/></svg></span>
+      <div><div class="brand-name">Usage to Cash</div><div class="brand-sub">Billing reconciliation</div></div>
+    </div>
+    <nav class="nav" aria-label="Main">
+      <a href="#overview" data-view="overview"><svg viewBox="0 0 20 20"><path d="M3 3h6v8H3zM11 3h6v5h-6zM11 10h6v7h-6zM3 13h6v4H3z"/></svg>Overview</a>
+      <a href="#exceptions" data-view="exceptions"><svg viewBox="0 0 20 20"><path d="M10 2l8 15H2z"/><path d="M10 8v4M10 14.5v.01"/></svg>Exceptions <span class="nav-count" id="navExCount"></span></a>
+      <a href="#ar" data-view="ar"><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="7.5"/><path d="M10 5v5l3 2"/></svg>AR ageing</a>
+      <a href="#customers" data-view="customers"><svg viewBox="0 0 20 20"><circle cx="7" cy="7" r="3"/><path d="M2 17c0-3 2.5-5 5-5s5 2 5 5M13 4.5a3 3 0 010 5M15 12c2 .5 3 2.5 3 5"/></svg>Customers</a>
+      <a href="#data" data-view="data"><svg viewBox="0 0 20 20"><ellipse cx="10" cy="4.5" rx="7" ry="2.5"/><path d="M3 4.5v11c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5v-11M3 10c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5"/></svg>Data sources</a>
+      <a href="#method" data-view="method"><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="7.5"/><path d="M8 8a2 2 0 113 1.7c-.7.4-1 .9-1 1.6M10 14v.01"/></svg>How it works</a>
+    </nav>
+    <div class="sidebar-foot">
+      <div class="dataset-pill" id="datasetPill"><span class="dot"></span><span id="datasetLabel">Synthetic sample</span></div>
+      <button class="btn ghost sm theme-btn" id="themeBtn" type="button" aria-label="Toggle dark mode">
+        <svg viewBox="0 0 20 20" class="i-moon"><path d="M16 12.5A7 7 0 017.5 4a7 7 0 108.5 8.5z"/></svg>
+        <svg viewBox="0 0 20 20" class="i-sun"><circle cx="10" cy="10" r="3.5"/><path d="M10 1.5v2M10 16.5v2M1.5 10h2M16.5 10h2M4 4l1.4 1.4M14.6 14.6L16 16M4 16l1.4-1.4M14.6 5.4L16 4"/></svg>
+        <span>Theme</span>
+      </button>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="synthetic-banner" role="note">
+      <svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="8"/><path d="M10 9v5M10 6v.01"/></svg>
+      <span id="bannerText"><b>Synthetic demo data.</b> Made-up customers, prices and payments shaped like a GenAI inference platform's billing (token, image, audio minute and GPU hour meters). Not Simplismart's data or prices.</span>
+    </div>
+    <div id="view"></div>
+    <footer class="foot">
+      Built by Nitesh Kumar Yadav as a proof of work. Everything runs in your browser; uploaded files never leave it.
+      <a href="https://github.com/techi101/simplismart-recon" target="_blank" rel="noopener">Source and tests on GitHub</a>
+    </footer>
+  </main>
+</div>
+
+<div class="drawer-scrim" id="scrim" hidden></div>
+<aside class="drawer" id="drawer" aria-hidden="true" role="dialog" aria-labelledby="drawerTitle"></aside>
+<div class="tooltip" id="tooltip" role="tooltip" hidden></div>
+<script type="module" src="app.js"></script>
+</body>
+</html>
